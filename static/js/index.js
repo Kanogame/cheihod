@@ -1,0 +1,5 @@
+class scrollBar {
+    function createScrollBar() {
+        
+    }
+}

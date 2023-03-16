@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="4.3036694"
-     inkscape:cx="83.998088"
-     inkscape:cy="254.78258"
+     inkscape:zoom="6.0863076"
+     inkscape:cx="189.03087"
+     inkscape:cy="334.27492"
      inkscape:window-width="1824"
      inkscape:window-height="822"
      inkscape:window-x="2001"
@@ -197,37 +197,71 @@
        sodipodi:nodetypes="csccccccccccccsccccccc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';fill:#000000;stroke-width:0.264583;fill-opacity:1"
-       x="4.5168371"
-       y="72.651382"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="8.6422491"
+       y="71.197044"
        id="text697-3"><tspan
          sodipodi:role="line"
          id="tspan695-6"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';stroke-width:0.264583;fill:#000000;fill-opacity:1"
-         x="4.5168371"
-         y="72.651382">Ч</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="8.6422491"
+         y="71.197044">Ч</tspan></text>
     <path
-       style="fill:#42cf71;stroke-width:0.0986097;fill-opacity:1"
-       d="m 5.0394748,65.715091 c 0,0 0.71146,-1.752489 0.5342,-2.075986 -0.116228,-0.212115 -0.530614,-0.21826 -0.530614,-0.21826 v -1.48374 h 0.690614 v 0.719 l 0.506617,1.34e-4 v -0.719134 h 2.082429 v 0.719118 h 0.482954 v -0.719118 h 0.714276 c -0.02682,0.496893 0.02259,1.022994 0,1.485542 0,0 -0.416716,-0.01485 -0.486276,0.216477 -0.12447,0.413937 0.481221,2.075995 0.481221,2.075995 l -0.679227,-2.7e-5 -0.465247,-2.116726 -1.149747,-5.4e-5 -1.149747,-5.3e-5 -0.36951,2.11686 z"
+       style="fill:#42cf71;fill-opacity:1;stroke-width:0.0986097"
+       d="m 9.1648863,64.260754 c 0,0 0.71146,-1.752489 0.5342,-2.075986 -0.116228,-0.212115 -0.530614,-0.21826 -0.530614,-0.21826 v -1.48374 h 0.690614 v 0.719 l 0.5066167,1.34e-4 v -0.719134 h 2.082429 v 0.719118 h 0.482954 v -0.719118 h 0.714276 c -0.02682,0.496893 0.02259,1.022994 0,1.485542 0,0 -0.416716,-0.01485 -0.486276,0.216477 -0.12447,0.413937 0.481221,2.075995 0.481221,2.075995 l -0.679227,-2.7e-5 -0.465247,-2.116726 -1.149747,-5.4e-5 -1.149747,-5.3e-5 -0.3695097,2.11686 z"
        id="path707-7"
        sodipodi:nodetypes="csccccccccccccsccccccc" />
     <text
        xml:space="preserve"
        style="font-size:9.87778px;fill:#000000;stroke-width:0.264583"
-       x="15.379053"
-       y="71.357239"
+       x="19.504465"
+       y="69.902901"
        id="text113-3-7"><tspan
          sodipodi:role="line"
          id="tspan111-6-0"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';stroke-width:0.264583"
-         x="15.379053"
-         y="71.357239">чей-<tspan
+         x="19.504465"
+         y="69.902901">чей-<tspan
    style="fill:#42cf71;fill-opacity:1"
    id="tspan2597">ход</tspan></tspan></text>
     <path
        style="fill:#42cf71;fill-opacity:1;stroke-width:0.0828199"
-       d="m 15.960387,66.161366 c 0,0 0.567446,-1.54993 0.426067,-1.836037 -0.0927,-0.187596 -0.423207,-0.193032 -0.423207,-0.193032 v -1.312243 h 0.550819 v 0.635895 l 0.404068,1.19e-4 v -0.636014 h 1.660904 v 0.636 h 0.385194 v -0.636 h 0.569692 c -0.02138,0.439461 0.01802,0.904752 0,1.313838 0,0 -0.332364,-0.01313 -0.387844,0.191455 -0.09927,0.366092 0.383812,1.836043 0.383812,1.836043 l -0.541737,-2.4e-5 -0.371072,-1.872066 -0.917015,-4.8e-5 -0.917015,-4.6e-5 -0.294714,1.872184 z"
+       d="m 20.085799,64.707029 c 0,0 0.567446,-1.54993 0.426067,-1.836037 -0.0927,-0.187596 -0.423207,-0.193032 -0.423207,-0.193032 v -1.312243 h 0.550819 v 0.635895 l 0.404068,1.19e-4 v -0.636014 h 1.660904 v 0.636 h 0.385194 v -0.636 h 0.569692 c -0.02138,0.439461 0.01802,0.904752 0,1.313838 0,0 -0.332364,-0.01313 -0.387844,0.191455 -0.09927,0.366092 0.383812,1.836043 0.383812,1.836043 l -0.541737,-2.4e-5 -0.371072,-1.872066 -0.917015,-4.8e-5 -0.917015,-4.6e-5 -0.294714,1.872184 z"
        id="path707-2-9"
+       sodipodi:nodetypes="csccccccccccccsccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="8.0949707"
+       y="94.258179"
+       id="text697-3-8"><tspan
+         sodipodi:role="line"
+         id="tspan695-6-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="8.0949707"
+         y="94.258179">Ч</tspan></text>
+    <path
+       style="fill:#42cf71;fill-opacity:1;stroke-width:0.0986097"
+       d="m 8.6176078,87.321882 c 0,0 0.71146,-1.752489 0.5342,-2.075986 -0.116228,-0.212115 -0.530614,-0.21826 -0.530614,-0.21826 v -1.48374 h 0.690614 v 0.719 l 0.506616,1.34e-4 v -0.719134 h 2.0824292 v 0.719118 h 0.482954 v -0.719118 h 0.714276 c -0.02682,0.496893 0.02259,1.022994 0,1.485542 0,0 -0.416716,-0.01485 -0.486276,0.216477 -0.12447,0.413937 0.481221,2.075995 0.481221,2.075995 l -0.679227,-2.7e-5 -0.465247,-2.116726 -1.149747,-5.4e-5 -1.1497472,-5.3e-5 -0.369509,2.11686 z"
+       id="path707-7-9"
+       sodipodi:nodetypes="csccccccccccccsccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.87778px;fill:#000000;stroke-width:0.264583"
+       x="18.957186"
+       y="92.964043"
+       id="text113-3-7-2"><tspan
+         sodipodi:role="line"
+         id="tspan111-6-0-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic';stroke-width:0.264583"
+         x="18.957186"
+         y="92.964043">чей-<tspan
+   style="fill:#42cf71;fill-opacity:1"
+   id="tspan2597-2">ход</tspan></tspan></text>
+    <path
+       style="fill:#42cf71;fill-opacity:1;stroke-width:0.0828199"
+       d="m 49.731213,90.861831 c 0,0 0.370699,-1.598982 0.22932,-1.885089 -0.0927,-0.187596 -0.423207,-0.193032 -0.423207,-0.193032 v -1.312243 h 0.550819 v 0.635895 l 0.404068,1.19e-4 v -0.636014 h 1.660904 v 0.636 h 0.385194 v -0.636 h 0.569692 c -0.02138,0.439461 0.01802,0.904752 0,1.313838 0,0 -0.332364,-0.01313 -0.387844,0.191455 -0.09927,0.366092 0.219822,1.909124 0.219822,1.909124 l -0.653552,0.0016 -0.37702,-1.876868 -0.635262,-0.06992 -0.682981,0.108169 -0.389937,1.799728 z"
+       id="path707-2-9-3"
        sodipodi:nodetypes="csccccccccccccsccccccc" />
   </g>
 </svg>
