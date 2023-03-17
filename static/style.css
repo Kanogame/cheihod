@@ -267,6 +267,43 @@ body {
         position: relative;
         cursor: pointer;
     }
+
+    .login-inp {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        width: 315px;
+        height: 48px;
+        border-radius: 6px;
+        outline: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 16px;
+        color: #C4C4C4;
+        border: 1px solid #25b553;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .login {
+        height: 82vh; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .login-h1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+    }
 }
 
 @media (min-width: 1300px) {
@@ -596,6 +633,10 @@ body {
     
     .head-button:hover{
         color:rgba(37,181,83,1);
+    }
+
+    .login-h1 {
+        font-size: 50px;
     }
 }
 
