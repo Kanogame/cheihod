@@ -39,6 +39,32 @@ body {
         align-items: center;
     }
 
+    .three-bars {
+        position: relative;
+    }
+
+    .bar-buttons
+    {
+        display: none;
+        z-index: 999;
+        position: absolute;
+        padding: 5px 5px 10px 10px;
+        background-color: white;
+        border-radius: 7px;
+        left: -150px;
+    }
+
+    .bar-button
+    {
+        display: block;
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+        margin-bottom: 10px;
+        padding-right: 30px;
+        border-bottom: 1px solid #bbb;
+    }
+
     .places {
         display: none;
     }

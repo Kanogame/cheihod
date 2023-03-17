@@ -9,10 +9,13 @@ const wow = new WOW({
 });
 wow.init();
 console.log("wow loaded");
-
 const mobilePanel = document.getElementById("mobile-panel");
 
 const bars = document.getElementById("three-bars");
 bars.addEventListener("click", () => {
-    if ()
+    if (mobilePanel.style.display === "") {
+        mobilePanel.style.display = "block";
+    } else {
+        mobilePanel.style.display = "";
+    }
 })
