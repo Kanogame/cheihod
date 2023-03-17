@@ -49,7 +49,7 @@ body {
 }
 
 .main-content { 
-    padding: 50px 0;
+    padding: 70px 0;
     background: rgb(37,181,83);
     background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
     display: flex;
@@ -114,7 +114,7 @@ body {
 }
 
 .pref-content {
-    padding: 40px 50px;
+    padding: 70px 50px;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -176,6 +176,11 @@ body {
     font-weight: 700;
     line-height: 70px;
     margin: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nextup-content { 
@@ -244,6 +249,7 @@ body {
 }
 
 .nextup-h1 {
+    margin-top: 20px;
     font-weight: 700;
     font-size: 40px;
     color: white;
@@ -307,6 +313,13 @@ body {
     margin-right: 100px;
 }
 
+.square {
+    background-color: #25b553;
+    margin-top: 10px;
+    height: 10px;
+    width: 150px;
+}
+
 .square-gradient
 {
     aspect-ratio: 1 / 1;
@@ -356,6 +369,8 @@ body {
 }
 
 .head-button {
+    color: black;
+    text-decoration: none;
     position: relative;
     cursor: pointer;
 }

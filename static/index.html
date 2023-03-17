@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./node_modules/wow.js/css/libs/animate.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Чей-ход</title>
 </head>
@@ -17,7 +18,7 @@
             <div class="places">
                 <div class="head-button">Календарь</div>
                 <div class="head-button">Главная</div>
-                <div class="head-button">О нас</div>
+                <a href="./pages/about.html" class="head-button">О нас</a>
             </div>
             <div class="login-group">
                 <div class="login-button">Войти</div>
@@ -28,11 +29,11 @@
     <div class="main">
         <div class="main-content">
             <div class="main-text">
-                <div class="main-h1">
+                <div class="main-h1 wow fadeInUp">
                     Мероприятие для любителей настольных игр
                 </div>
-                <div class="main-p">Чей-ход предоставляет вам уникальную возможность бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла можно купить</div>
-                <div class="main-button">купить</div>
+                <div class="main-p wow fadeInUp" data-wow-delay="0.3s">Чей-ход предоставляет вам уникальную возможность бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла можно купить</div>
+                <div class="main-button wow fadeInUp" data-wow-delay="0.5s">купить</div>
             </div>
             <div class="main-image">
                 <img src="./sources/img/game.png" alt="" class="main-img">
@@ -44,9 +45,10 @@
     <div class="pref">
         <div class="pref-header">
             Наши преимущества
+            <div class="square"></div>
         </div>
         <div class="pref-content">
-            <div class="card">
+            <div class="card wow fadeInUp" data-wow-delay="0.3s">
                 <img src="./sources/svg/present.svg" alt="" class="card-logo">
                 <div class="card-h2">
                     Мы крутые
@@ -55,7 +57,7 @@
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos nobis quos rerum quas repudiandae a incidunt, iure ducimus illum id possimus dolorem fugit, suscipit quia deserunt fuga debitis voluptates.
                 </div>
             </div>
-            <div class="card">
+            <div class="card wow fadeInUp">
                 <img src="./sources/svg/present.svg" alt="" class="card-logo">
                 <div class="card-h2">
                     Мы крутые
@@ -64,7 +66,7 @@
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos nobis quos rerum quas repudiandae a incidunt, iure ducimus illum id possimus dolorem fugit, suscipit quia deserunt fuga debitis voluptates.
                 </div>
             </div>
-            <div class="card">
+            <div class="card wow fadeInUp" data-wow-delay="0.3s">
                 <img src="./sources/svg/present.svg" alt="" class="card-logo">
                 <div class="card-h2">
                     Мы крутые
@@ -78,10 +80,10 @@
     <div class="nextup">
         <div class="nextup-content">
             <div class="nextup-wrapper">
-                <div class="nextup-h1">
+                <div class="nextup-h1 wow fadeInUp">
                     О наших встречах можно узанать зарание в календаре
                 </div>
-                <div class="nextup-button-text">
+                <div class="nextup-button-text wow fadeInUp"  data-wow-delay="0.4s">
                     Перейти в календарь
                 </div>
             </div>
@@ -163,8 +165,8 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <div class="about-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quos quae sequi assumenda reiciendis earum ipsa, placeat tenetur, vel nobis expedita fugit!</div>
-                    <div class="about-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Enim, ullam amet unde similique dolor repellendus inventore quas eaque molestias magni iure minima rem cum nihil accusamus, corrupti, in ipsa porro!<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptates molestias pariatur cum sint aspernatur libero ducimus. Sapiente fuga atque labore, consequuntur laudantium laboriosam, omnis ullam numquam suscipit nisi accusamus!</div>
+                    <div class="about-h wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quos quae sequi assumenda reiciendis earum ipsa, placeat tenetur, vel nobis expedita fugit!</div>
+                    <div class="about-p wow fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Enim, ullam amet unde similique dolor repellendus inventore quas eaque molestias magni iure minima rem cum nihil accusamus, corrupti, in ipsa porro!<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptates molestias pariatur cum sint aspernatur libero ducimus. Sapiente fuga atque labore, consequuntur laudantium laboriosam, omnis ullam numquam suscipit nisi accusamus!</div>
                 </div>
             </div>
         </div>
@@ -181,5 +183,6 @@
             </div>
         </div>
     </div>
+    <script type="module"  src="./js/index.js"></script>
 </body>
 </html>
