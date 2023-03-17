@@ -49,7 +49,7 @@ body {
 }
 
 .main-content { 
-    padding: 40px 50px;
+    padding: 50px 0;
     background: rgb(37,181,83);
     background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
     display: flex;
@@ -136,10 +136,10 @@ body {
 
 .card:hover {
     border: 3px solid #25b553;
-    padding-top: calc(-3px);
-    padding-bottom: calc(-3px);
-    padding-left: calc(-3px);
-    padding-right: calc(-3px);
+    padding-top: calc(100% -3px);
+    padding-bottom: calc(100% -3px);
+    padding-left: calc(100% -3px);
+    padding-right: calc(100% -3px);
 }
 
 .card:hover > .card-logo {
@@ -198,6 +198,11 @@ body {
     display: flex;
     flex-direction: column;
     padding: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.nextup-card:hover {
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .nextup-name {
@@ -221,6 +226,14 @@ body {
     font-weight: 500;
     color:#2a7a43;
     margin-top: auto;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.nextup-button:hover {
+    color: white;
+    background-color: #2a7a43;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
 }
 
 .inline-img {
@@ -239,6 +252,28 @@ body {
 .nextup-wrapper {
     flex: 4 1 0;
     align-self: start;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nextup-button-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2a7a43;
+    border-radius: 16px;
+    background-color: white;
+    padding: 20px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 240px;
+}
+
+.nextup-button-text:hover {
+    color: white;
+    background-color: #2a7a43;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
 }
 
 .nextup-header {
@@ -306,9 +341,13 @@ body {
     font-size: 15px;
 }
 
+.header-bottom {
+    background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
+}
+
 .hb {
     padding: 5px 100px;
-    background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
+   
 }
 
 .hb-logo {
