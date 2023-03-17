@@ -8,6 +8,11 @@
     font-family: Montserrat, sans-serif;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .header {
     padding: 5px 100px;
     border-bottom: 1px solid gray;
@@ -34,10 +39,17 @@
     border: 2px solid #25b553;
     padding: 10px 20px;
     border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.login-button:hover {
+    color: white;
+    background-color: #25b553;
 }
 
 .main-content { 
-    padding: 40px 50px 10px 50px;
+    padding: 40px 50px;
     background: rgb(37,181,83);
     background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
     display: flex;
@@ -70,6 +82,14 @@
     border-radius: 16px;
     background-color: white;
     padding: 20px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    color: white;
+    background-color: #2a7a43;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
 }
 
 .circle {
@@ -94,7 +114,7 @@
 }
 
 .pref-content {
-    padding: 40px 50px 10px 50px;
+    padding: 40px 50px;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -111,6 +131,23 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    transition: 0.2s ease-in;
+}
+
+.card:hover {
+    border: 3px solid #25b553;
+    padding-top: calc(-3px);
+    padding-bottom: calc(-3px);
+    padding-left: calc(-3px);
+    padding-right: calc(-3px);
+}
+
+.card:hover > .card-logo {
+    background-color: rgba(37,181,83,0.3);
+}
+
+.card:nth-child(even) {
+    padding: 65px 50px;
 }
 
 .card-logo {
@@ -119,6 +156,7 @@
     border: 2px solid #25b553;
     border-radius: 12px;
     padding: 10px;
+    transition: 0.2s ease-in-out;
 }
 
 .card-h2 {
@@ -131,9 +169,6 @@
     font-size: 17px;
 }
 
-.card:nth-child(even) {
-    padding: 65px 50px;
-}
 
 .pref-header {
     text-align: center;
@@ -144,7 +179,7 @@
 }
 
 .nextup-content { 
-    padding: 40px 50px 10px 50px;
+    padding: 40px 50px;
     background: rgb(37,181,83);
     background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
     display: flex;
@@ -203,4 +238,108 @@
 
 .nextup-wrapper {
     flex: 4 1 0;
+    align-self: start;
+}
+
+.nextup-header {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.nextup-cards {
+    flex: 8 1 0;
+}
+
+.nextup-cards-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-content {
+    padding: 40px 50px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+}
+
+.about-image
+{
+    margin-right: 100px;
+}
+
+.square-gradient
+{
+    aspect-ratio: 1 / 1;
+    height: 500px;
+    padding: 10px;
+    background: linear-gradient(rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
+    position: relative;
+}
+
+.image-2-a
+{
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    box-shadow: 0 0 15px black;
+}
+
+.white
+{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.about-h {
+    font-size: 30px;
+    font-family: 600;
+}
+
+.about-p {
+    font-size: 15px;
+}
+
+.hb {
+    padding: 5px 100px;
+    background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
+}
+
+.hb-logo {
+    font-size: 20px;
+    color: white;
+}
+
+.head-button {
+    position: relative;
+    cursor: pointer;
+}
+
+.head-button:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    left: 50%;
+    position: absolute;
+    background: rgba(37,181,83,1);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.head-button:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.head-button:hover{
+    color:rgba(37,181,83,1);
 }
