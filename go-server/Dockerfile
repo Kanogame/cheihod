@@ -1,17 +1,8 @@
-FROM golang:1.20
+FROM golang:1.20-alpine
 
-ENV GO111MODULE=auto
-
+RUN mkdir /build
+ADD . /build
 WORKDIR /build
 
-COPY go.mod ./
-
-COPY ./HttpServer ./HttpServer
-COPY ./static ./static
-COPY main.go ./
-
-RUN go build -o go-server ./
-
-EXPOSE 10234
-
-CMD [ "/go-server" ]
+RUN go build -o main .
+CMD [ "/build/main" ]
