@@ -14,7 +14,15 @@ func StartHttpServer(port int) {
 
 func HttpHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
-		fmt.Fprintf(w, "nothing to see here")
+		path := r.URL.Path
+
+		if path == "/" {
+			path = "./static/"
+		} else {
+			path = "./static/" + path
+		}
+
+		http.ServeFile(w, r, path)
 	} else if r.Method == "POST" {
 		PostHandler(w, r)
 	}
