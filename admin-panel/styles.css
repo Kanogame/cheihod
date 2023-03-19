@@ -1,0 +1,119 @@
+:root {
+    --main-color: #101218;
+    --text-color: #898989;
+}
+
+* { 
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    background-color: #101218;
+}
+
+.main {
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sidebar {
+    padding: 25px;
+    background-color: var(--main-color);
+    border-right: 1px solid #898989;
+}
+
+.sidebar-head {
+    padding-bottom: 20px;
+}
+
+.sibebar-module-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #898989;
+}
+
+.sidebar-element {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #898989;
+    border-radius: 6px;
+}
+
+.sidebar-logo {
+    width: 15px;
+    height: 15px;
+    filter: invert(55%) sepia(0%) saturate(0%) hue-rotate(72deg) brightness(98%) contrast(92%);
+}
+
+.sidebar-name {
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-element:hover {
+    background: linear-gradient(90deg, rgba(114,254,125,1) 0%, rgba(5,179,95,1) 100%);
+    color: black;
+}
+
+.sidebar-element:hover > .sidebar-logo {
+    filter: none;
+}
+
+.work-area {
+    max-width: 8219px;
+    flex: 1 1 0;
+}
+
+.header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(42,122,67,1) 0%, rgba(37,181,83,1) 100%);
+    margin: 0 auto;
+}
+
+.header-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.account-section {
+    display: flex;
+    gap: 20px;
+}
+
+.account-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(38, 38, 38, 0.28);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    border: 1px solid rgba(38, 38, 38, 0.42);
+}
+
+.clock {
+    width: 10px;
+    height: 10px;
+    background: url("./sources/svg/clock-solid.svg") no-repeat center;
+    filter: invert(100%) sepia(0%) saturate(187%) hue-rotate(118deg) brightness(113%) contrast(101%);
+}
+
+.clock:hover {
+    filter: invert(35%) sepia(73%) saturate(407%) hue-rotate(86deg) brightness(93%) contrast(88%);
+}
