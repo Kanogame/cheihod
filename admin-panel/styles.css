@@ -44,6 +44,7 @@ body {
     align-items: center;
     color: #898989;
     border-radius: 6px;
+    text-decoration: none;
 }
 
 .sidebar-logo {
@@ -80,6 +81,7 @@ body {
     align-items: center;
     background: linear-gradient(90deg, rgba(42,122,67,1) 0%, rgba(37,181,83,1) 100%);
     margin: 0 auto;
+    border-bottom: 1px solid #898989;
 }
 
 .header-name {
@@ -105,6 +107,24 @@ body {
     backdrop-filter: blur(2.7px);
     -webkit-backdrop-filter: blur(2.7px);
     border: 1px solid rgba(38, 38, 38, 0.42);
+}
+
+.section-header {
+    padding: 10px 5px;
+    border-bottom: 1px solid #898989;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section-button {
+    background-color: #333333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.section-button:hover {
+    background-color: #4d4d4d;
 }
 
 .clock {

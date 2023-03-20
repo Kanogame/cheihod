@@ -9,3 +9,7 @@
 .logo-app {
     background: url("./sources/svg/application.svg") no-repeat center;
 }
+
+.logo-plus {
+    background: url("./sources/svg/plus.svg") no-repeat center;
+}
