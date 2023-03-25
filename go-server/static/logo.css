@@ -1,0 +1,15 @@
+.logo-home {
+    background: url("./sources/svg/home.svg") no-repeat center;
+}
+
+.logo-stats {
+    background: url("./sources/svg/chart.svg") no-repeat center;
+}
+
+.logo-app {
+    background: url("./sources/svg/application.svg") no-repeat center;
+}
+
+.logo-plus {
+    background: url("./sources/svg/plus.svg") no-repeat center;
+}
