@@ -1,6 +1,6 @@
 "use strict"
 import {url} from "../config.json"
-import {sendType} from "./post"
+import {sendPost} from "./post"
 
 var loginForm = document.getElementById("loginForm");
 
@@ -12,5 +12,5 @@ loginForm.addEventListener("submit", (e)=>{
 });
 
 function SendLogin(bodyData) {
-    sendType("login");
+    sendPost(url + "login", bodyData);
 }

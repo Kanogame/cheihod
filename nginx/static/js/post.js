@@ -1,10 +1,9 @@
 "use strict"
-import {url} from "../config.json"
 
-async function sendType(type) {
+async function sendPost(url, object) {
     const resp = await fetch(url, {
         method: "POST",
-        body: type
+        body: object
     });
     const text = await resp.text();
     alert(text);

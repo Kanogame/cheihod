@@ -29,5 +29,8 @@ func HttpHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {
+	path := r.URL.Path
+	if path == "/login" {
 
+	}
 }
