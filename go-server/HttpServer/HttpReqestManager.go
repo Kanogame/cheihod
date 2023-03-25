@@ -38,5 +38,7 @@ func PostHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	if path == "/login" {
 		UserLogin(w, r)
+	} else if path == "/reg" {
+		UserReg(w, r)
 	}
 }
