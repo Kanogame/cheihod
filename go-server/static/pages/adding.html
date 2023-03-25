@@ -70,24 +70,36 @@
                     Новый билет
                 </div>
             </div>
-            <div class="new-place">
-                <form action="POST" id="new-place-form">
-                    <div class="Form-header">
-                        Вход в существующий аккаунт
+            <div class="new">
+                <form action="POST" id="new-place-form" class="form">
+                    <div class="form-header">
+                        Создание мероприятия
                     </div>
                     <div class="form-input">
                         <div class="i-text">
-                            Логин
+                            Место
                         </div>
-                        <input type="text" class="login-inp" placeholder="Логин" name="Username">
+                        <input type="text" class="login-inp" placeholder="ул. Пушкина 47" name="place">
                     </div>
                     <div class="form-input">
                         <div class="i-text">
-                            Пароль
+                            Дата
                         </div>
-                        <input id="message" type="text" name="Password" class="login-inp" placeholder="Пароль">
+                        <input id="message" type="text" name="time" class="login-inp" placeholder="17.05.2023">
                     </div>
-                    <button class="main-button" id="login" type="submit">Войти</button>
+                    <div class="form-input">
+                        <div class="i-text">
+                            Время
+                        </div>
+                        <input id="message" type="text" name="time" class="login-inp" placeholder="15:30">
+                    </div>
+                    <div class="form-input">
+                        <div class="i-text">
+                            Кол-во людей
+                        </div>
+                        <input id="message" type="text" name="capacity" class="login-inp" placeholder="30">
+                    </div>
+                    <button class="main-button" id="login" type="submit">Добавить</button>
                 </form>
             </div>
         </div>
