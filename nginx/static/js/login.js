@@ -1,6 +1,6 @@
 "use strict"
-
-const url = "https://localhost:20251/"
+import {url} from "../config.json"
+import {sendType} from "./post"
 
 var loginForm = document.getElementById("loginForm");
 
@@ -10,3 +10,7 @@ loginForm.addEventListener("submit", (e)=>{
     const bodyData = CreateLogJSON(data.get("Username"), data.get("Password"))
     SendLogin(bodyData);
 });
+
+function SendLogin(bodyData) {
+    sendType("login");
+}

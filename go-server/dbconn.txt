@@ -1,1 +1,1 @@
-10234
+root:password@tcp(localhost:3306)/cheihod
