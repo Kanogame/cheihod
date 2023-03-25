@@ -17,6 +17,7 @@ function SendLogin(bodyData) {
 async function sendPost(url, object) {
     const resp = await fetch("http://localhost:10234/login", {
         method: "POST",
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json'
         },
