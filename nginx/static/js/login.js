@@ -1,8 +1,7 @@
 "use strict"
-import {url} from "../config.json"
-import {sendPost} from "./post"
 
-var loginForm = document.getElementById("loginForm");
+const url = "http://localhost:10234/";
+const loginForm = document.getElementById("loginForm");
 
 loginForm.addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -13,4 +12,23 @@ loginForm.addEventListener("submit", (e)=>{
 
 function SendLogin(bodyData) {
     sendPost(url + "login", bodyData);
+}
+
+async function sendPost(url, object) {
+    const resp = await fetch("http://localhost:10234/login", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(object),
+    });
+    const text = await resp.text();
+    alert(text);
+}
+
+function CreateLogJSON (username, password) {
+    return {
+        Username: username,
+        Password: password,
+    }
 }

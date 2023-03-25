@@ -4,12 +4,18 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
+
+	"github.com/rs/cors"
 )
 
 func StartHttpServer(port int) {
+	var c = cors.New(cors.Options{
+		AllowedOrigins: []string{"127.0.0.1:5500"},
+	})
+
 	handler := http.HandlerFunc(HttpHandler)
 	fmt.Println("RequestManager is lintening on", port)
-	http.ListenAndServe(":"+strconv.Itoa(port), handler)
+	http.ListenAndServe(":"+strconv.Itoa(port), c.Handler(handler))
 }
 
 func HttpHandler(w http.ResponseWriter, r *http.Request) {
@@ -31,6 +37,6 @@ func HttpHandler(w http.ResponseWriter, r *http.Request) {
 func PostHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	if path == "/login" {
-
+		UserLogin(w, r)
 	}
 }
