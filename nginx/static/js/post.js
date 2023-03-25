@@ -18,14 +18,6 @@ class PostConnection {
         const text = await resp.text();
         alert(text);
     }
-
-    async TextResponce(resp) {
-        return await resp.text();
-    }
-
-    async JsonResponce(resp) {
-        return await resp.json();
-    }
 }
 
 export default PostConnection;

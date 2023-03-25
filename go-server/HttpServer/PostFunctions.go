@@ -23,6 +23,7 @@ func UserLogin(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println(post)
 
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	fmt.Fprintf(w, "success")
 }
 
