@@ -9,14 +9,15 @@ class PostConnection {
     async SendData() {
         const resp = await fetch(this.url, {
             method: "POST",
-            mode: 'no-cors',
+            mode: "cors",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(this.data),
         });
         const text = await resp.text();
-        alert(text);
+        console.log(resp);
+        console.log(text);
     }
 }
 

@@ -1,7 +1,7 @@
 "use strict"
 import PostConnection from "./post.js";
 
-const url = "http://localhost:10234/login";
+const url = "http://127.0.0.1:10234/login";
 const loginForm = document.getElementById("loginForm");
 
 loginForm.addEventListener("submit", (e)=>{

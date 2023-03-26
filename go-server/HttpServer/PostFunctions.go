@@ -37,9 +37,10 @@ func UserReg(w http.ResponseWriter, r *http.Request) {
 
 	db := database.NewDB()
 	if database.NewUserAccount(db, post) {
-		fmt.Fprintf(w, "success")
+		fmt.Fprint(w, "success")
+		fmt.Println("success")
 	} else {
-		fmt.Fprintf(w, "exist")
+		fmt.Fprint(w, "exist")
 	}
 
 }
