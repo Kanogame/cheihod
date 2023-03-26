@@ -8,7 +8,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func newDB() *sql.DB {
+func NewDB() *sql.DB {
 	file, err := os.Open("./dbconn.txt")
 	if err != nil {
 		panic(err)

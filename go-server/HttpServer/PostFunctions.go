@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	database "main/DataBase"
 	utils "main/Utils"
 	"net/http"
 )
@@ -34,7 +35,11 @@ func UserReg(w http.ResponseWriter, r *http.Request) {
 	err := json.Unmarshal(body, &post)
 	utils.ServerError(err)
 
-	fmt.Println(post)
+	db := database.NewDB()
+	if database.NewUserAccount(db, post) {
+		fmt.Fprintf(w, "success")
+	} else {
+		fmt.Fprintf(w, "exist")
+	}
 
-	fmt.Fprintf(w, "success")
 }
