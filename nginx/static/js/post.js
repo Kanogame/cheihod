@@ -28,7 +28,7 @@ class PostConnection {
             },
             body: JSON.stringify(this.data),
         });
-        const text = await resp.text();
+        const text = await resp.json();
         return text
     }
 }

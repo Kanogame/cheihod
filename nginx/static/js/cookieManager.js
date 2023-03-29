@@ -31,6 +31,12 @@ class CookieManager {
     ));
     return matches ? decodeURIComponent(matches[1]) : undefined;
     }
+
+    deleteCookie(name) {
+        setCookie(name, "", {
+          'max-age': -1
+        })
+      }
 }
 
 export default CookieManager

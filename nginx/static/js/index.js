@@ -9,6 +9,7 @@ const wow = new WOW({
 });
 wow.init();
 console.log("wow loaded");
+findToken();
 const mobilePanel = document.getElementById("mobile-panel");
 
 const bars = document.getElementById("three-bars");

@@ -13,10 +13,11 @@ loginForm.addEventListener("submit", (e)=>{
     SendLogin(bodyData);
 });
 
-function SendLogin(bodyData) {
+async function SendLogin(bodyData) {
     const post = new PostConnection(url, bodyData);
-    const resp = post.SendDataJson();
+    const resp = await post.SendDataJson();
     cookie.setCookie("token", resp.token);
+    alert("success");
 }
 
 function CreateLogJSON (username, password) {
