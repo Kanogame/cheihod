@@ -30,3 +30,5 @@ func VerifyUserAccount(db *sql.DB, data utils.LoginJson) bool {
 
 	return password == data.Password
 }
+
+func NewToken()
