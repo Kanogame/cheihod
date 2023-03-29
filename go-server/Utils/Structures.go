@@ -10,3 +10,8 @@ type RegJson struct {
 	Password string
 	Email    string
 }
+
+type NewToken struct {
+	Token  string
+	Userid int
+}
