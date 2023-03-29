@@ -3,17 +3,10 @@ package httpserver
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	database "main/DataBase"
 	utils "main/Utils"
 	"net/http"
 )
-
-func readPost(r *http.Request) []byte {
-	body, err := io.ReadAll(r.Body)
-	utils.ServerError(err)
-	return body
-}
 
 func UserLogin(w http.ResponseWriter, r *http.Request) {
 	var body = readPost(r)
@@ -22,16 +15,11 @@ func UserLogin(w http.ResponseWriter, r *http.Request) {
 	err := json.Unmarshal(body, &post)
 	utils.ServerError(err)
 
-	fmt.Println(post)
+	db := database.NewDB()
 
-	w.Header().Set("Content-Type", "application/json")
-	var Res = map[string]string{
-		"success": "true",
-		"token":   "testToken",
-	}
-	jsonRes, err := json.Marshal(Res)
-	utils.ServerError(err)
-	fmt.Fprintf(w, string(jsonRes))
+	var token = utils.RandString(30)
+	addToken(db, token, post.Username)
+	sendToken(w, token)
 }
 
 func UserReg(w http.ResponseWriter, r *http.Request) {
