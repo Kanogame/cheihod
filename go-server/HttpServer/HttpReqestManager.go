@@ -34,11 +34,13 @@ func HttpHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+var PostFunctions = map[string]func(http.ResponseWriter, *http.Request){
+	"/login": UserLogin,
+	"/reg":   UserReg,
+	"/token": TokenName,
+}
+
 func PostHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
-	if path == "/login" {
-		UserLogin(w, r)
-	} else if path == "/reg" {
-		UserReg(w, r)
-	}
+	PostFunctions[path](w, r)
 }
