@@ -14,7 +14,7 @@ regForm.addEventListener("submit", (e)=>{
 
 function SendLogin(bodyData) {
     const post = new PostConnection(url, bodyData);
-    const resp = post.SendData();
+    const resp = post.SendDataText();
 }
 
 function CreateRegJSON (username, password, email) {

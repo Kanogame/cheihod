@@ -6,7 +6,7 @@ class PostConnection {
         this.data = data;
     }
 
-    async SendData() {
+    async SendDataText() {
         const resp = await fetch(this.url, {
             method: "POST",
             mode: "cors",
@@ -16,8 +16,20 @@ class PostConnection {
             body: JSON.stringify(this.data),
         });
         const text = await resp.text();
-        console.log(resp);
-        console.log(text);
+        return text
+    }
+
+    async SendDataJson() {
+        const resp = await fetch(this.url, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.data),
+        });
+        const text = await resp.text();
+        return text
     }
 }
 
