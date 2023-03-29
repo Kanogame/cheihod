@@ -36,5 +36,20 @@ func UserReg(w http.ResponseWriter, r *http.Request) {
 	} else {
 		fmt.Fprint(w, "exist")
 	}
+}
 
+func TokenName(w http.ResponseWriter, r *http.Request) {
+	var body = readPost(r)
+	var post string
+	err := json.Unmarshal(body, &post)
+	utils.ServerError(err)
+
+	db := database.NewDB()
+	var name = database.GetNameByToken(db, post)
+	if name != "" {
+		sendJson(w, map[string]string{
+			"success": "true",
+			"name":    name,
+		})
+	}
 }

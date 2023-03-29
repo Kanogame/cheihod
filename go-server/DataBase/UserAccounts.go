@@ -52,3 +52,33 @@ func NewToken(db *sql.DB, data utils.NewToken) bool {
 	}
 	return success
 }
+
+func GetUserIdByToken(db *sql.DB, token string) int {
+	res, err := db.Query("SELECT userid FROM Token WHERE token = ?", token)
+	utils.UserError(err)
+
+	var id int
+
+	for res.Next() {
+		err := res.Scan(&id)
+		utils.UserError(err)
+	}
+	return id
+}
+
+func GetUserById(db *sql.DB, id int) utils.RegJson {
+	res, err := db.Query("SELECT username, passwrd, email FROM Users WHERE id = ?", id)
+	utils.UserError(err)
+
+	var user utils.RegJson
+
+	for res.Next() {
+		err := res.Scan(&user.Username, &user.Password, &user.Email)
+		utils.UserError(err)
+	}
+	return user
+}
+
+func GetNameByToken(db *sql.DB, token string) string {
+	return GetUserById(db, GetUserIdByToken(db, token)).Username
+}

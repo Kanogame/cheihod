@@ -2,6 +2,7 @@
 import PostConnection from "../utils/post.js";
 import CookieManager from "../utils/cookieManager.js";
 
+
 const url = "http://127.0.0.1:10234/login";
 const loginForm = document.getElementById("loginForm");
 const cookie = new CookieManager();

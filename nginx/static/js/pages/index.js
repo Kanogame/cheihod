@@ -1,5 +1,5 @@
 import WOW from '../../node_modules/wow.js/src/WOW.js';
-import CookieManager from '../utils/cookieManager.js';
+import findToken from "../utils/token.js"
 
 "use strict"
 const wow = new WOW({
