@@ -1,4 +1,5 @@
-import WOW from '../node_modules/wow.js/src/WOW.js' 
+import WOW from '../../node_modules/wow.js/src/WOW.js';
+import CookieManager from '../utils/cookieManager.js';
 
 "use strict"
 const wow = new WOW({
