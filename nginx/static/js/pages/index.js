@@ -10,8 +10,10 @@ const wow = new WOW({
 });
 wow.init();
 console.log("wow loaded");
-findToken();
 const mobilePanel = document.getElementById("mobile-panel");
+const account = document.getElementById("account");
+const login = document.getElementById("login");
+const name = document.getElementById("name");
 
 const bars = document.getElementById("three-bars");
 bars.addEventListener("click", () => {
@@ -25,9 +27,11 @@ bars.addEventListener("click", () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
+        
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });
 });
+
+findToken(account, login, name);

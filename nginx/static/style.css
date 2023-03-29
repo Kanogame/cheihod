@@ -647,6 +647,28 @@ a {
     .about-bottom { 
         flex-direction: row-reverse;
     }
+
+    .account {
+        display: flex;
+        align-items: center;
+        gap:  15px;
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    .leave {
+        background-color: red;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+    }
 }
 
 
