@@ -24,8 +24,14 @@ func UserLogin(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println(post)
 
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	fmt.Fprintf(w, "success")
+	w.Header().Set("Content-Type", "application/json")
+	var Res = map[string]string{
+		"success": "true",
+		"token":   "testToken",
+	}
+	jsonRes, err := json.Marshal(Res)
+	utils.ServerError(err)
+	fmt.Fprintf(w, string(jsonRes))
 }
 
 func UserReg(w http.ResponseWriter, r *http.Request) {
