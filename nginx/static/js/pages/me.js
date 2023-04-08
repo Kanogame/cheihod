@@ -1,17 +1,12 @@
-import findToken from "../utils/token.js"
+import { findTokenFull } from "../utils/token.js";
+"use strict"
 
-const mobilePanel = document.getElementById("mobile-panel");
-const account = document.getElementById("account");
-const login = document.getElementById("login");
-const name = document.getElementById("name");
+const name = document.getElementById("me-name");
+const email = document.getElementById("me-email");
+init();
 
-const bars = document.getElementById("three-bars");
-bars.addEventListener("click", () => {
-    if (mobilePanel.style.display === "") {
-        mobilePanel.style.display = "block";
-    } else {
-        mobilePanel.style.display = "";
-    }
-});
-
-findToken(account, login, name);
+async function init() {
+    const data = await findTokenFull();
+    name.textContent = data.name;
+    email.textContent = data.email;
+}

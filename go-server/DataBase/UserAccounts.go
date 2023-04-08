@@ -82,3 +82,7 @@ func GetUserById(db *sql.DB, id int) utils.RegJson {
 func GetNameByToken(db *sql.DB, token string) string {
 	return GetUserById(db, GetUserIdByToken(db, token)).Username
 }
+
+func GetUserByToken(db *sql.DB, token string) utils.RegJson {
+	return GetUserById(db, GetUserIdByToken(db, token))
+}

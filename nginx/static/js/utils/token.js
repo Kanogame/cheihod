@@ -17,7 +17,7 @@ async function findToken(account, login, name) {
     }
 }
 
-async function findTokenFull() {
+export async function findTokenFull() {
     const cookie = new CookieManager();
     const token = cookie.getCookie("token");
     if (token === undefined) {
@@ -26,7 +26,7 @@ async function findTokenFull() {
         console.log(token);
         const post = new PostConnection("http://127.0.0.1:10234/token/full", token);
         const resp = await post.SendDataJson();
-        return resp
+        return resp;
     }
 }
 

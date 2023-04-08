@@ -53,3 +53,18 @@ func TokenName(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 }
+
+func TokenFull(w http.ResponseWriter, r *http.Request) {
+	var body = ReadPost(r)
+	var post string
+	err := json.Unmarshal(body, &post)
+	utils.ServerError(err)
+
+	db := database.NewDB()
+	var user = database.GetUserByToken(db, post)
+	SendJson(w, map[string]string{
+		"success": "true",
+		"name":    user.Username,
+		"email":   user.Email,
+	})
+}
