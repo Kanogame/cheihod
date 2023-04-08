@@ -1,5 +1,7 @@
+"use strict"
+
 class PostManager {
-    SendServerPost = async (urlArgs, body) => {
+    SendPostJson = async (urlArgs, body) => {
         const resp = await fetch("http://localhost:10235/" + urlArgs, {
             method: "POST",
             headers: {
@@ -7,15 +9,21 @@ class PostManager {
                 },
             body: JSON.stringify(body),
         });
-        return resp;
+        const data = await resp.json();
+        return data.success;
     }
 
-    ParseResponceText = async (resp) => {
+    SendPostText = async (urlArgs, body) => {
+        const resp = await fetch("http://localhost:10235/" + urlArgs, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+                },
+            body: JSON.stringify(body),
+        });
         const data = await resp.text();
-    }
-    
-    ParseResponceJson = async (resp) => {
-        const data = await resp.json();
+        console.log(data);
+        return resp;
     }
 }
 
