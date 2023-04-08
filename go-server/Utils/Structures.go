@@ -17,9 +17,9 @@ type NewToken struct {
 }
 
 type AddPlace struct {
-	name     string
-	place    string
-	date     string
-	time     string
-	capacity string
+	Name     string
+	Place    string
+	Date     string
+	Time     string
+	Capacity string
 }

@@ -15,6 +15,6 @@ placeform.addEventListener("click", e => {
     }
     const post = new postManager();
     const resp = post.SendServerPost("place/add", postBody);
-    resp = post.ParseResponceText(resp);
+    resp = post.ParseResponceJson(resp);
     console.log(resp); 
 });

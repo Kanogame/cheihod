@@ -16,7 +16,7 @@ func AddPlace(w http.ResponseWriter, r *http.Request) {
 
 	db := database.NewDB()
 	var name = database.AddPlace(db, post)
-	if name != "" {
+	if name {
 		httpserver.SendJson(w, map[string]string{
 			"success": "true",
 		})
