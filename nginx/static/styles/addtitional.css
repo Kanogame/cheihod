@@ -1,3 +1,89 @@
 .me-main {
     display: flex;
+    height: 100vh;
+}
+
+.me-sidebar {
+    padding: 25px;
+    background-color: var(--main-color);
+    border-right: 1px solid #898989;
+}
+
+.me-profile-photo {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.me-sidebar-head {
+    padding-bottom: 20px;
+}
+
+.me-sibebar-module-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #898989;
+}
+
+.me-sidebar-element {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #898989;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.me-sidebar-logo {
+    width: 15px;
+    height: 15px;
+    filter: invert(55%) sepia(0%) saturate(0%) hue-rotate(72deg) brightness(98%) contrast(92%);
+}
+
+.me-sidebar-name {
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.me-sidebar-element:hover {
+    background: linear-gradient(90deg, rgba(114,254,125,1) 0%, rgba(5,179,95,1) 100%);
+    color: black;
+}
+
+.me-work-area {
+    flex: 1 1 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.me-header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(42,122,67,1) 0%, rgba(37,181,83,1) 100%);
+    margin: 0 auto;
+    border-bottom: 1px solid #898989;
+}
+
+.me-header-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.me-name {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.me-email {
+    font-weight: 400;
+    font-size: 30px;
 }
