@@ -9,7 +9,7 @@ import (
 )
 
 func UserLogin(w http.ResponseWriter, r *http.Request) {
-	var body = readPost(r)
+	var body = ReadPost(r)
 	var post utils.LoginJson
 
 	err := json.Unmarshal(body, &post)
@@ -23,7 +23,7 @@ func UserLogin(w http.ResponseWriter, r *http.Request) {
 }
 
 func UserReg(w http.ResponseWriter, r *http.Request) {
-	var body = readPost(r)
+	var body = ReadPost(r)
 	var post utils.RegJson
 
 	err := json.Unmarshal(body, &post)
@@ -39,7 +39,7 @@ func UserReg(w http.ResponseWriter, r *http.Request) {
 }
 
 func TokenName(w http.ResponseWriter, r *http.Request) {
-	var body = readPost(r)
+	var body = ReadPost(r)
 	var post string
 	err := json.Unmarshal(body, &post)
 	utils.ServerError(err)
@@ -47,7 +47,7 @@ func TokenName(w http.ResponseWriter, r *http.Request) {
 	db := database.NewDB()
 	var name = database.GetNameByToken(db, post)
 	if name != "" {
-		sendJson(w, map[string]string{
+		SendJson(w, map[string]string{
 			"success": "true",
 			"name":    name,
 		})

@@ -15,3 +15,11 @@ type NewToken struct {
 	Token  string
 	Userid int
 }
+
+type AddPlace struct {
+	name     string
+	place    string
+	date     string
+	time     string
+	capacity string
+}
