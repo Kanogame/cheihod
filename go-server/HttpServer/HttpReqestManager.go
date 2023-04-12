@@ -35,10 +35,11 @@ func HttpHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 var PostFunctions = map[string]func(http.ResponseWriter, *http.Request){
-	"/login":      UserLogin,
-	"/reg":        UserReg,
-	"/token":      TokenName,
-	"/token/full": TokenFull,
+	"/login":         UserLogin,
+	"/reg":           UserReg,
+	"/token":         TokenName,
+	"/token/full":    TokenFull,
+	"/places/get/30": PlacesGetMounth,
 }
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {

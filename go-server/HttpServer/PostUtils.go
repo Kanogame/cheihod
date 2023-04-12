@@ -23,6 +23,13 @@ func SendJson(w http.ResponseWriter, data map[string]string) {
 	fmt.Fprintf(w, string(jsonRes))
 }
 
+func SendJsonArray(w http.ResponseWriter, data []map[string]string) {
+	w.Header().Set("Content-Type", "application/json")
+	jsonRes, err := json.Marshal(data)
+	utils.ServerError(err)
+	fmt.Fprintf(w, string(jsonRes))
+}
+
 func sendToken(w http.ResponseWriter, token string) {
 	var data = map[string]string{
 		"success": "true",
