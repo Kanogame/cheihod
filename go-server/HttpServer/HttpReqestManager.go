@@ -44,5 +44,6 @@ var PostFunctions = map[string]func(http.ResponseWriter, *http.Request){
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
+	fmt.Println(path)
 	PostFunctions[path](w, r)
 }

@@ -16,7 +16,8 @@ func AddPlace(db *sql.DB, data utils.AddPlace) bool {
 }
 
 func GetPlacesMounth(db *sql.DB) []map[string]string {
-	res, err := db.Query("SELECT (name, place, time, capacity) FROM Places WHERE DATE_SUB(CURDATE(),INTERVAL 30 DAY) <= time;")
+	fmt.Println("GetPlacesMounth")
+	res, err := db.Query("SELECT name, place, time, capacity FROM Places WHERE time BETWEEN date_sub(now(), interval 1 MONTH) AND date_add(now(), interval 1 MONTH);")
 	utils.UserError(err)
 
 	var places []map[string]string
@@ -24,13 +25,16 @@ func GetPlacesMounth(db *sql.DB) []map[string]string {
 	for res.Next() {
 		var name, place, time, capacity string
 		err := res.Scan(&name, &place, &time, &capacity)
-		places = append(places, map[string]string{
+		var resPlace = map[string]string{
 			"name":     name,
 			"place":    place,
 			"time":     time,
 			"capacity": capacity,
-		})
+		}
+		fmt.Println(resPlace)
+		places = append(places, resPlace)
 		utils.UserError(err)
 	}
+	fmt.Println(places)
 	return places
 }

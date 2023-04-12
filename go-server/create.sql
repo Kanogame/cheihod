@@ -43,3 +43,7 @@ CREATE TABLE Token (
     token VARCHAR(30) NOT NULL UNIQUE,
     userid INT NOT NULL
 );
+
+SELECT * FROM Places;
+
+SELECT name, place, time, capacity FROM Places WHERE time BETWEEN date_sub(now(), interval 1 MONTH) AND date_add(now(), interval 1 MONTH);

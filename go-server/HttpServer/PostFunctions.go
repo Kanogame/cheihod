@@ -63,6 +63,7 @@ func TokenFull(w http.ResponseWriter, r *http.Request) {
 }
 
 func PlacesGetMounth(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("/places/get/30")
 	var places = database.GetPlacesMounth(database.NewDB())
 	SendJsonArray(w, places)
 }
