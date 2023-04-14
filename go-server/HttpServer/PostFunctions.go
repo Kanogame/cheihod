@@ -27,10 +27,10 @@ func UserReg(w http.ResponseWriter, r *http.Request) {
 	utils.ServerError(err)
 
 	if database.NewUserAccount(database.NewDB(), post) {
-		fmt.Fprint(w, "success")
-		fmt.Println("success")
+		var token = utils.RandString(30)
+		addToken(database.NewDB(), token, utils.LoginJson{Username: post.Username, Password: post.Password}, w)
 	} else {
-		fmt.Fprint(w, "exist")
+		sendToken(w, "", false)
 	}
 }
 

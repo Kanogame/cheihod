@@ -27,13 +27,14 @@ bars.addEventListener("click", () => {
 });
 
 const resp = await findTokenFull();
+try {
 if (resp.success === "true") {
     account.classList.remove("disabled");
     login.classList.add("disabled");
     accountM.classList.remove("disabled");
     loginM.classList.add("disabled");
     name.textContent = resp.name
-}
+}} catch (e) {}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
