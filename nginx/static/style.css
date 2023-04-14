@@ -18,6 +18,11 @@ a {
     text-decoration: none;
 }
 
+.disabled {
+    display: none;
+}
+
+
 @media (min-width: 200px) {
     .header {
         padding: 5px 10px;
@@ -308,6 +313,10 @@ a {
         text-align: center;
         font-size: 30px;
         font-weight: 700;
+    }
+
+    .disabled {
+        display: none;
     }
 }
 
@@ -654,10 +663,6 @@ a {
         gap:  15px;
     }
 
-    .disabled {
-        display: none;
-    }
-
     .leave {
         background-color: red;
         width: 30px;
@@ -668,6 +673,10 @@ a {
         align-items: center;
         color: white;
         font-size: 30px;
+    }
+
+    .disabled {
+        display: none;
     }
 }
 

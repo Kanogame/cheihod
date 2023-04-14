@@ -22,7 +22,8 @@
                     <a class="bar-button" href="./index.html">Главная</a>
                     <a class="bar-button" href="./pages/calendar.html">Календарь</a>
                     <a class="bar-button" href="./pages/about.html">О нас</a>
-                    <a class="bar-button" href="./pages/login.html">Войти</a>
+                    <a class="bar-button" href="./pages/login.html" id="login-mobile">Войти</a>
+                    <a class="bar-button" href="./pages/me.html" id="account-mobile">Обо мне</a>
                 </div>
             </div>
             <div class="places">
@@ -33,9 +34,9 @@
             <div class="login-group">
                 <a class="login-button" href="./pages/login.html" id="login">Войти</a>
                 <div class="account disabled" id="account">
-                    <div class="me" id="name">
+                    <a class="me" id="name" href="./pages/me.html">
                         Kano
-                    </div>
+                    </a>
                     <div class="leave">
                         X
                     </div>
@@ -213,6 +214,6 @@
             </div>
         </div>
     </div>
-    <script type="module" src="./js/pages/index.js"></script>
+    <script type="module" src="./js/pages/loginInit.js"></script>
 </body>
 </html>
