@@ -16,8 +16,7 @@ func UserLogin(w http.ResponseWriter, r *http.Request) {
 	utils.ServerError(err)
 
 	var token = utils.RandString(30)
-	addToken(database.NewDB(), token, post.Username)
-	sendToken(w, token)
+	addToken(database.NewDB(), token, post, w)
 }
 
 func UserReg(w http.ResponseWriter, r *http.Request) {

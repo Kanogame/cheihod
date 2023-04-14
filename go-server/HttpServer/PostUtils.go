@@ -8,6 +8,7 @@ import (
 	database "main/DataBase"
 	utils "main/Utils"
 	"net/http"
+	"strconv"
 )
 
 func ReadPost(r *http.Request) []byte {
@@ -20,25 +21,30 @@ func SendJson(w http.ResponseWriter, data map[string]string) {
 	w.Header().Set("Content-Type", "application/json")
 	jsonRes, err := json.Marshal(data)
 	utils.ServerError(err)
-	fmt.Fprintf(w, string(jsonRes))
+	fmt.Fprint(w, string(jsonRes))
 }
 
 func SendJsonArray(w http.ResponseWriter, data []map[string]string) {
 	w.Header().Set("Content-Type", "application/json")
 	jsonRes, err := json.Marshal(data)
 	utils.ServerError(err)
-	fmt.Fprintf(w, string(jsonRes))
+	fmt.Fprint(w, string(jsonRes))
 }
 
-func sendToken(w http.ResponseWriter, token string) {
+func sendToken(w http.ResponseWriter, token string, success bool) {
 	var data = map[string]string{
-		"success": "true",
+		"success": strconv.FormatBool(success),
 		"token":   token,
 	}
 	SendJson(w, data)
 }
 
-func addToken(db *sql.DB, token string, name string) {
-	data := utils.NewToken{Token: token, Userid: database.GetUserIdByName(db, name)}
+func addToken(db *sql.DB, token string, post utils.LoginJson, w http.ResponseWriter) {
+	if !database.VerifyUserAccount(db, post) {
+		sendToken(w, "", false)
+		return
+	}
+	data := utils.NewToken{Token: token, Userid: database.GetUserIdByName(db, post.Username)}
 	database.NewToken(db, data)
+	sendToken(w, token, true)
 }

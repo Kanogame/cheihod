@@ -6,7 +6,7 @@ CREATE TABLE Users (
     gameid INT
 );
 
-SELECT * FROM Places;
+SELECT * FROM Users;
 
 CREATE TABLE Tickets (
     id INT PRIMARY KEY AUTO_INCREMENT,
