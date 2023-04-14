@@ -10,7 +10,7 @@ import (
 
 func StartHttpServer(port int) {
 	var c = cors.New(cors.Options{
-		AllowedOrigins: []string{"http://127.0.0.1:10234"},
+		AllowedOrigins: []string{"http://127.0.0.1:10234", "http://192.168.1.7:10234"},
 	})
 
 	handler := http.HandlerFunc(HttpHandler)

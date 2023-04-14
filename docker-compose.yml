@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+    front:
+        build:
+            context: "./nginx"
+        ports:
+            - "80:80"
+        image: chi-hod-front
+        container_name: chnginx
+        restart: unless-stopped
+    back:
+        build:
+            context: "./go-server"
+        ports:
+            - "10234:10234"
+        image: chi-hod-back
+        container_name: chgo
+        restart: unless-stopped
+        depends_on:
+            - front
