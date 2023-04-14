@@ -2,7 +2,7 @@
 import PostConnection from "../utils/post.js";
 import CookieManager from "../utils/cookieManager.js";
 
-const url = "http://192.168.1.7:10234/reg";
+const url = "http://proxy-api:10234/reg";
 const regForm = document.getElementById("regForm");
 const cookie = new CookieManager();
 
