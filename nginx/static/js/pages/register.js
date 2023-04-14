@@ -1,8 +1,10 @@
 "use strict"
 import PostConnection from "../utils/post.js";
+import CookieManager from "../utils/cookieManager.js";
 
 const url = "http://127.0.0.1:10234/reg";
 const regForm = document.getElementById("regForm");
+const cookie = new CookieManager();
 
 regForm.addEventListener("submit", (e)=>{
     e.preventDefault();
