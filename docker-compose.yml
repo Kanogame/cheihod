@@ -4,18 +4,33 @@ services:
     front:
         build:
             context: "./nginx"
+        image: chi-hod-front
         ports:
             - "80:80"
-        image: chi-hod-front
         container_name: chnginx
         restart: unless-stopped
+        expose:
+            - "80"
     back:
         build:
             context: "./go-server"
-        ports:
-            - "10234:10234"
         image: chi-hod-back
         container_name: chgo
+        expose:
+            - "10234"
         restart: unless-stopped
         depends_on:
             - front
+    mysqlch:
+        image: mysql:latest
+        cap_add:
+            - SYS_NICE
+        restart: always
+        environment:
+            - MYSQL_DATABASE=cheihod
+            - MYSQL_ROOT_PASSWORD=wasdqert
+        expose:
+            - "3306"
+volumes:
+    db:
+        driver: local

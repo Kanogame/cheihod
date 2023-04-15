@@ -10,7 +10,7 @@ import (
 
 func StartHttpServer(port int) {
 	var c = cors.New(cors.Options{
-		AllowedOrigins: []string{"http://127.0.0.1:5501", "http://192.168.1.7:5501", "http://proxy-api:10234"},
+		AllowedOrigins: []string{"http://127.0.0.1:5501", "http://192.168.1.7:5501", "http://176.65.35.172:80", "http://176.65.35.172:80/api", "http://176.65.35.172", "http://176.65.35.172/api"},
 	})
 
 	handler := http.HandlerFunc(HttpHandler)
@@ -35,14 +35,15 @@ func HttpHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 var PostFunctions = map[string]func(http.ResponseWriter, *http.Request){
-	"/login":         UserLogin,
-	"/reg":           UserReg,
-	"/token":         TokenName,
-	"/token/full":    TokenFull,
-	"/places/get/30": PlacesGetMounth,
+	"/api/login":         UserLogin,
+	"/api/reg":           UserReg,
+	"/api/token":         TokenName,
+	"/api/token/full":    TokenFull,
+	"/api/places/get/30": PlacesGetMounth,
 }
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
+	fmt.Println(path)
 	PostFunctions[path](w, r)
 }

@@ -2,7 +2,7 @@
 import PostConnection from "../utils/post.js";
 import CookieManager from "../utils/cookieManager.js";
 
-const url = "http://192.168.1.7:10234/login";
+const url = "http://176.65.35.172/api/login";
 const loginForm = document.getElementById("loginForm");
 const cookie = new CookieManager();
 
