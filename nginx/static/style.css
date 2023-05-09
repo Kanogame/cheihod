@@ -320,6 +320,7 @@ a {
     }
 
     .modal {
+        display: relative;
         position: fixed;
         top: 0;
         left: 0;
@@ -327,6 +328,15 @@ a {
         background-color: rgba(0, 0, 0, 0.6);
         width: 100%;
         height: 100%;
+    }
+
+    .modal-body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        background-color: white;
     }
 }
 
@@ -687,6 +697,31 @@ a {
 
     .disabled {
         display: none;
+    }
+
+    .modal-body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        width: auto;
+        height: auto;
+    }
+
+    .modal-text {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .modal-specs {
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
     }
 }
 

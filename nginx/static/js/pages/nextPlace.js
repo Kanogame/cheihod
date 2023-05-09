@@ -6,7 +6,7 @@ const post = new PostConnection("http://127.0.0.1:10234/api/places/get/30");
 const res = await post.SendDataJson();
 
 const container = document.getElementById("card-container");
-const modalContainer = document.getElementById("modal");
+const modalContainer = document.getElementById("modalContainer");
 
 for (const cardData of res) {
     console.log(cardData);
@@ -40,6 +40,7 @@ for (const cardData of res) {
 }
 
 function openModal(cardData) {
-    modal
+    const modal = document.createElement("div");
     modal.classList.add("modal");
+    modalContainer.append(modal);
 }
