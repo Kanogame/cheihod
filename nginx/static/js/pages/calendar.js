@@ -13,6 +13,6 @@ var calendarInstance1 = calendarJs( "calendar", {
     // All your options can be set here
   } );
 
-  const post = new PostConnection("http://127.0.0.1/places/get/30");
+  const post = new PostConnection("http://127.0.0.1:10234/api/places/get/30");
   const res = await post.SendDataJson();
   console.log(res);

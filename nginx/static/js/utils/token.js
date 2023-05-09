@@ -7,7 +7,7 @@ async function findToken(account, login, name) {
     const token = cookie.getCookie("token");
     if (token === undefined) {
     } else {
-        const post = new PostConnection("http://127.0.0.1/api/token", token);
+        const post = new PostConnection("http://127.0.0.1:10234/api/token", token);
         const resp = await post.SendDataJson();
         if (resp.success === "true") {
             name.textContent = resp.name;
@@ -22,7 +22,7 @@ export async function findTokenFull() {
     const token = cookie.getCookie("token");
     if (token === undefined) {
     } else {
-        const post = new PostConnection("http://127.0.0.1/api/token/full", token);
+        const post = new PostConnection("http://127.0.0.1:10234/api/token/full", token);
         const resp = await post.SendDataJson();
         if (resp.success === "true") {
             return resp
