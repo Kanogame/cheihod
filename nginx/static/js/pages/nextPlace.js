@@ -13,7 +13,10 @@ const token = cookie.getCookie("token");
 const container = document.getElementById("card-container");
 const modalContainer = document.getElementById("modalContainer");
 
+let i = 0;
 for (const cardData of res) {
+    i++;
+    if (i > 3) { break };
     const card = Card(cardData, openModal);
     container.append(card);
 }
