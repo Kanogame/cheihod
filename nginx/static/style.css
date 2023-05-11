@@ -338,6 +338,21 @@ a {
         padding: 30px;
         background-color: white;
     }
+
+    #tickets {
+        display: flex;
+        gap: 20px;
+    }
+
+    .tickets {
+        padding: 15px 5px;
+        background: rgb(37,181,83);
+        background: linear-gradient(90deg, rgba(37,181,83,1) 0%, rgba(42,122,67,1) 100%);
+    }
+
+    .tickets > .main-p {
+        color: white;
+    }
 }
 
 @media (min-width: 1300px) {

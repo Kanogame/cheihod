@@ -15,7 +15,7 @@ func AddTicket(db *sql.DB, data utils.Ticket) bool {
 	return success
 }
 
-func TicketGetMounth(db *sql.DB, userId string) []map[string]string {
+func TicketGetMounth(db *sql.DB, userId int) []map[string]string {
 	res, err := db.Query("SELECT name, place, time FROM Places WHERE id IN (SELECT placeid FROM Tickets WHERE usersid = ?) AND time BETWEEN current_timestamp() AND date_add(now(), interval 1 MONTH);", userId)
 	utils.UserError(err)
 

@@ -85,6 +85,7 @@ func TicketGetMounth(w http.ResponseWriter, r *http.Request) {
 	var post string
 	err := json.Unmarshal(body, &post)
 	utils.ServerError(err)
-	var places = database.TicketGetMounth(database.NewDB(), post)
+	db := database.NewDB()
+	var places = database.TicketGetMounth(db, database.GetUserIdByToken(db, post))
 	SendJsonArray(w, places)
 }
