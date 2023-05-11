@@ -10,7 +10,7 @@ import (
 
 func StartHttpServer(port int) {
 	var c = cors.New(cors.Options{
-		AllowedOrigins: []string{"http://127.0.0.1:5501", "http://192.168.1.7:5501", "http://176.65.35.172:80", "http://176.65.35.172:80/api", "http://176.65.35.172", "http://176.65.35.172/api"},
+		AllowedOrigins: []string{"http://127.0.0.1:5501", "http://127.0.0.1:10235", "http://192.168.1.7:5501", "http://176.65.35.172:80", "http://176.65.35.172:80/api", "http://176.65.35.172", "http://176.65.35.172/api"},
 	})
 
 	handler := http.HandlerFunc(HttpHandler)
@@ -40,6 +40,8 @@ var PostFunctions = map[string]func(http.ResponseWriter, *http.Request){
 	"/api/token":         TokenName,
 	"/api/token/full":    TokenFull,
 	"/api/places/get/30": PlacesGetMounth,
+	"/api/ticket/add":    TicketAdd,
+	"/api/ticket/get":    TicketGetMounth,
 }
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {

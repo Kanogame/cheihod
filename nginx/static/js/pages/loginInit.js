@@ -34,7 +34,7 @@ if (resp.success === "true") {
     accountM.classList.remove("disabled");
     loginM.classList.add("disabled");
     name.textContent = resp.name
-}} catch (e) {}
+}} catch (e) { accountM.classList.add("disabled"); }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

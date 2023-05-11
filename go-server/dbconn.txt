@@ -1,1 +1,1 @@
-root:wasdqert@tcp(mysqlch:3306)/cheihod
+root:wasdqert@tcp(localhost:3306)/cheihod

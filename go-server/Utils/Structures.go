@@ -23,3 +23,13 @@ type AddPlace struct {
 	Time     string
 	Capacity string
 }
+
+type TicketAdd struct {
+	Token   string
+	PlaceId string
+}
+
+type Ticket struct {
+	UserId  string
+	PlaceId string
+}

@@ -17,15 +17,16 @@ func AddPlace(db *sql.DB, data utils.AddPlace) bool {
 
 func GetPlacesMounth(db *sql.DB) []map[string]string {
 	fmt.Println("GetPlacesMounth")
-	res, err := db.Query("SELECT name, place, time, capacity FROM Places WHERE time BETWEEN date_sub(now(), interval 1 MONTH) AND date_add(now(), interval 1 MONTH);")
+	res, err := db.Query("SELECT id, name, place, time, capacity FROM Places WHERE time BETWEEN current_timestamp() AND date_add(now(), interval 1 MONTH);")
 	utils.UserError(err)
 
 	var places []map[string]string
 
 	for res.Next() {
-		var name, place, time, capacity string
-		err := res.Scan(&name, &place, &time, &capacity)
+		var id, name, place, time, capacity string
+		err := res.Scan(&id, &name, &place, &time, &capacity)
 		var resPlace = map[string]string{
+			"id":       id,
 			"name":     name,
 			"place":    place,
 			"time":     time,

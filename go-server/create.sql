@@ -6,6 +6,8 @@ CREATE TABLE Users (
     gameid INT
 );
 
+DROP TABLE Users;
+
 SELECT * FROM Users;
 
 CREATE TABLE Tickets (
@@ -44,6 +46,9 @@ CREATE TABLE Token (
     userid INT NOT NULL
 );
 
-SELECT * FROM Places;
+SELECT * FROM Tickets;
 
 SELECT name, place, time, capacity FROM Places WHERE time BETWEEN date_sub(now(), interval 1 MONTH) AND date_add(now(), interval 1 MONTH);
+
+SELECT name, place, time FROM Places WHERE id IN (SELECT placeid FROM Tickets WHERE usersid = 1)
+ AND time BETWEEN current_timestamp() AND date_add(now(), interval 1 MONTH);
