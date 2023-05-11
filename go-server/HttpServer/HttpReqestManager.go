@@ -41,6 +41,7 @@ var PostFunctions = map[string]func(http.ResponseWriter, *http.Request){
 	"/api/token/full":    TokenFull,
 	"/api/places/get/30": PlacesGetMounth,
 	"/api/ticket/add":    TicketAdd,
+	"/api/ticket/get":    TicketGetMounth,
 }
 
 func PostHandler(w http.ResponseWriter, r *http.Request) {

@@ -79,3 +79,12 @@ func TicketAdd(w http.ResponseWriter, r *http.Request) {
 		"success": fmt.Sprint(res),
 	})
 }
+
+func TicketGetMounth(w http.ResponseWriter, r *http.Request) {
+	body := ReadPost(r)
+	var post string
+	err := json.Unmarshal(body, &post)
+	utils.ServerError(err)
+	var places = database.TicketGetMounth(database.NewDB(), post)
+	SendJsonArray(w, places)
+}
