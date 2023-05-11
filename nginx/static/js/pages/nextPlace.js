@@ -4,7 +4,7 @@ import PostConnection from "../utils/post.js";
 import CookieManager from "../utils/cookieManager.js";
 import Card from "../utils/createCard.js";
 
-const post = new PostConnection("http://127.0.0.1:10234/api/places/get/30");
+const post = new PostConnection("http://176.65.35.172/api/places/get/30");
 const res = await post.SendDataJson();
 
 const cookie = new CookieManager();
@@ -47,7 +47,7 @@ function openModal(cardData) {
     button.classList.add("nextup-button");
     button.textContent= "Перейти";
     button.addEventListener("click", async () => {
-        const post = new PostConnection("http://127.0.0.1:10234/api/ticket/add", {token: token, placeId: cardData.id});
+        const post = new PostConnection("http://176.65.35.172/api/ticket/add", {token: token, placeId: cardData.id});
         const resp = await post.SendDataJson();
         console.log(resp);
     })

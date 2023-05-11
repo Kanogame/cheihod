@@ -18,10 +18,12 @@ services:
         container_name: chgo
         expose:
             - "10234"
+            - "10235"
         restart: unless-stopped
         depends_on:
             - front
     mysqlch:
+        container_name: mysqlch
         image: mysql:latest
         cap_add:
             - SYS_NICE

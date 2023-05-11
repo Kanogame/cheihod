@@ -2,7 +2,7 @@
 
 class PostManager {
     SendPostJson = async (urlArgs, body) => {
-        const resp = await fetch("http://localhost:10235/" + urlArgs, {
+        const resp = await fetch("http://176.65.35.172/admin/" + urlArgs, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -14,7 +14,7 @@ class PostManager {
     }
 
     SendPostText = async (urlArgs, body) => {
-        const resp = await fetch("http://localhost:10235/" + urlArgs, {
+        const resp = await fetch("http://176.65.35.172/admin/" + urlArgs, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

@@ -2,7 +2,7 @@
 import PostConnection from "../utils/post.js";
 import CookieManager from "../utils/cookieManager.js";
 
-const url = "http://127.0.0.1:10234/api/reg";
+const url = "http://176.65.35.172/api/reg";
 const regForm = document.getElementById("regForm");
 const cookie = new CookieManager();
 

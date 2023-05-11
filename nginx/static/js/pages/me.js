@@ -16,7 +16,7 @@ async function init() {
     const data = await findTokenFull();
     name.textContent = data.name;
     email.textContent = data.email;
-    const post = new PostConnection("http://127.0.0.1:10234/api/ticket/get", token);
+    const post = new PostConnection("http://176.65.35.172/api/ticket/get", token);
     const res = await post.SendDataJson();
     console.log(res);
     for (const cardData of res) {
