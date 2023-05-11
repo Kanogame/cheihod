@@ -1,9 +1,13 @@
 "use strict"
 
 import PostConnection from "../utils/post.js";
+import CookieManager from "../utils/cookieManager.js";
 
 const post = new PostConnection("http://127.0.0.1:10234/api/places/get/30");
 const res = await post.SendDataJson();
+
+const cookie = new CookieManager();
+const token = cookie.getCookie("token");
 
 const container = document.getElementById("card-container");
 const modalContainer = document.getElementById("modalContainer");
@@ -64,9 +68,9 @@ function openModal(cardData) {
     button.classList.add("nextup-button");
     button.textContent= "Перейти";
     button.addEventListener("click", async () => {
-        const post = new PostConnection("http://127.0.0.1:10234/api/places/add", {token: token, placeId: cardData.id});
-        const res = await post.SendDataJson();
-        console.log(res);
+        const post = new PostConnection("http://127.0.0.1:10234/api/ticket/add", {token: token, placeId: cardData.id});
+        const resp = await post.SendDataJson();
+        console.log(resp);
     })
     card.append(specs);
     const warn = document.createElement("div");

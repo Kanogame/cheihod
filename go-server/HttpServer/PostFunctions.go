@@ -66,3 +66,16 @@ func PlacesGetMounth(w http.ResponseWriter, r *http.Request) {
 	var places = database.GetPlacesMounth(database.NewDB())
 	SendJsonArray(w, places)
 }
+
+func TicketAdd(w http.ResponseWriter, r *http.Request) {
+	body := ReadPost(r)
+	var post utils.TicketAdd
+	err := json.Unmarshal(body, &post)
+	utils.ServerError(err)
+	db := database.NewDB()
+	userId := database.GetUserIdByToken(db, post.Token)
+	res := database.AddTicket(db, utils.Ticket{UserId: fmt.Sprint(userId), PlaceId: post.PlaceId})
+	SendJson(w, map[string]string{
+		"success": fmt.Sprint(res),
+	})
+}
