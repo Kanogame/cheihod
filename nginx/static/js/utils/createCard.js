@@ -13,10 +13,12 @@ function Card(cardData, openModal) {
     const time = document.createElement("div");
     time.innerHTML = `<img src="../sources/svg/clock-solid.svg" alt="" class="inline-img">${cardData.time}`;
     const free = document.createElement("div");
-    free.innerHTML = `<img src="../sources/svg/ticket-solid.svg" alt="" class="inline-img">${cardData.capacity}`;
+    if (cardData.capacity != undefined) {
+        free.innerHTML = `<img src="../sources/svg/ticket-solid.svg" alt="" class="inline-img">${cardData.capacity}`;
+        specs.append(free);
+    }
     specs.append(place);
     specs.append(time);
-    specs.append(free);
     const button = document.createElement("div");
     button.classList.add("nextup-button");
     button.textContent= "Перейти";

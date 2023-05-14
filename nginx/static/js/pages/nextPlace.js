@@ -60,6 +60,7 @@ function openModal(cardData) {
         const post = new PostConnection("http://176.65.35.172/api/ticket/add", {token: token, placeId: cardData.id});
         const resp = await post.SendDataJson();
         console.log(resp);
+        modal.classList.add("disabled");
     })
     card.append(specs);
     const warn = document.createElement("div");
