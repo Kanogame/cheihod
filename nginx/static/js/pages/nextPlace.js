@@ -3,6 +3,7 @@
 import PostConnection from "../utils/post.js";
 import CookieManager from "../utils/cookieManager.js";
 import Card from "../utils/createCard.js";
+//import {Calendar} from "../../dist/calendarjs.js";
 
 const post = new PostConnection("http://176.65.35.172/api/places/get/30");
 const res = await post.SendDataJson();
@@ -13,8 +14,17 @@ const token = cookie.getCookie("token");
 const container = document.getElementById("card-container");
 const modalContainer = document.getElementById("modalContainer");
 
+var ele = document.getElementById('calendar');
+var opts = {abbrDay: true};
+var cal = new calendar(ele, opts);
+
 let i = 0;
 for (const cardData of res) {
+    cal.addEvent({
+        desc: cardData.name,
+        startDate: new Date(cardData.time),
+        endDate: new Date(cardData.time),
+    })
     i++;
     if (i > 3) { break };
     const card = Card(cardData, openModal);

@@ -215,6 +215,62 @@ a {
         align-items: center;
     }
 
+    .nextup-card {
+        cursor: default;
+        width: 300px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.41);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.8px);
+        -webkit-backdrop-filter: blur(7.8px);
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nextup-card:hover {
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .nextup-cards-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .nextup-name {
+        font-size: 23px;
+        font-weight: 700;
+    }
+    
+    .nextup-specs {
+        padding-top: 20px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .nextup-button {
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 500;
+        color:#2a7a43;
+        margin-top: auto;
+        transition: 0.2s ease-in;
+        cursor: pointer;
+    }
+
+    .inline-img {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
     .nextup-h1 {
         margin-top: 20px;
         font-weight: 700;
@@ -501,49 +557,7 @@ a {
         flex-direction: row;
     }
 
-    .nextup-card {
-        cursor: default;
-        width: 300px;
-        height: 400px;
-        background: rgba(255, 255, 255, 0.41);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.8px);
-        -webkit-backdrop-filter: blur(7.8px);
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        transition: 0.3s ease-in-out;
-    }
     
-    .nextup-card:hover {
-        background: rgba(255, 255, 255, 0.7);
-    }
-    
-    .nextup-name {
-        font-size: 23px;
-        font-weight: 700;
-    }
-    
-    .nextup-specs {
-        padding-top: 20px;
-        font-weight: 400;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
-    
-    .nextup-button {
-        background-color: white;
-        padding: 5px;
-        border-radius: 10px;
-        text-align: center;
-        font-weight: 500;
-        color:#2a7a43;
-        margin-top: auto;
-        transition: 0.2s ease-in;
-        cursor: pointer;
-    }
     
     .nextup-button:hover {
         color: white;
@@ -568,13 +582,6 @@ a {
         color: white;
     }
     
-    .inline-img {
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-        display: inline-block;
-    }
-    
     .nextup-header {
         display: block;
         text-align: center;
@@ -586,11 +593,6 @@ a {
     
     .nextup-cards {
         flex: 8 1 0;
-    }
-    
-    .nextup-cards-wrapper {
-        display: flex;
-        justify-content: space-around;
     }
 
     .about-content {
